@@ -6,8 +6,10 @@ namespace Moqunity
 {
 	public class DefaultFactory : Factory
 	{
-		private Application application;
-
-		public Application Application => application ?? (application = new DefaultApplication());
+		public Application Application { get; private set; }
+		public void Init()
+		{
+			Application = new DefaultApplication();
+		}
 	}
 }
