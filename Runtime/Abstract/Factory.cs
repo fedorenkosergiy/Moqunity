@@ -5,6 +5,8 @@ namespace Moqunity.Abstract
 	{
 		Application Application { get; }
 
+		Screen Screen { get; }
+
 		void Init();
 	}
 }
