@@ -7,6 +7,8 @@ namespace Moqunity.Abstract
 
 		Screen Screen { get; }
 
+		Input Input { get; }
+
 		void Init();
 	}
 }
