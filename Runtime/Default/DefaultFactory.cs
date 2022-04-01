@@ -10,6 +10,7 @@ namespace Moqunity
 		public Application Application { get; private set; }
 		public Screen Screen { get; private set; }
 		public Input Input { get; private set; }
+		public Time Time { get; private set; }
 
 		public void Init()
 		{
@@ -17,9 +18,10 @@ namespace Moqunity
 			{
 				if (needsInitialization)
 				{
-					Application = new DefaultApplication();
-					Screen = new DefaultScreen();
-					Input = new DefaultInput();
+					Application = CreateApplication();
+					Screen = CreateScreen();
+					Input = CreateInput();
+					Time = CreateTime();
 					needsInitialization = false;
 				}
 				else
@@ -28,5 +30,13 @@ namespace Moqunity
 				}
 			}
 		}
+
+		protected virtual Application CreateApplication() => new DefaultApplication();
+
+		protected virtual Screen CreateScreen() => new DefaultScreen();
+
+		protected virtual Input CreateInput() => new DefaultInput();
+
+		protected virtual Time CreateTime() => new DefaultTime();
 	}
 }

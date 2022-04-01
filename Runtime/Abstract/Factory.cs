@@ -9,6 +9,8 @@ namespace Moqunity.Abstract
 
 		Input Input { get; }
 
+		Time Time { get; }
+
 		void Init();
 	}
 }
