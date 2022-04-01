@@ -1,6 +1,4 @@
-﻿using Microsoft.CSharp.RuntimeBinder;
-using NUnit.Framework;
-using System;
+﻿using NUnit.Framework;
 
 namespace Moqunity.UnityEngine
 {
@@ -16,11 +14,15 @@ namespace Moqunity.UnityEngine
 		[Test]
 		public void CheckWidthSetter()
 		{
-			dynamic screen = Activator.CreateInstance("Unity.Moqunity", "Moqunity.UnityEngine.DefaultScreen");
-			Assert.Throws<RuntimeBinderException>(() =>
+#if !NET_STANDARD_2_0
+			dynamic screen = System.Activator.CreateInstance("Unity.Moqunity", "Moqunity.UnityEngine.DefaultScreen");
+			Assert.Throws<Microsoft.CSharp.RuntimeBinder.RuntimeBinderException>(() =>
 			{
 				screen.width = 100;
 			});
+#else
+			Assert.Ignore(Constants.REQUIRES_NET_4_X);
+#endif
 		}
 	}
 }
