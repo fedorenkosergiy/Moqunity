@@ -6,10 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0]
 ### Added
-- Input interface and implementation
-- Screen interface and implementation
-- Time interface and implementation
-- SystemInfo interface and implementation
+- Input interface, implementation, base fake
+- Screen interface, implementation, base fake 
+- Time interface, implementation, base fake
+- SystemInfo interface, implementation, base fake
+- Application base fake
 
 ## [0.1.0] - 2021-10-10
 ### Added
