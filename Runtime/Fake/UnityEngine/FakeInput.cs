@@ -1,9 +1,8 @@
 using System;
-using Moqunity.Abstract.UnityEngine;
 
 namespace Moqunity.Fake.UnityEngine
 {
-	public class FakeInput : Input
+	public class FakeInput : global::Moqunity.Abstract.UnityEngine.Input
 	{
 		public virtual bool simulateMouseWithTouches { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 			   
