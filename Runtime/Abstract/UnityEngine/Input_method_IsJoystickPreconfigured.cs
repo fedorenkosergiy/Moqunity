@@ -1,8 +1,9 @@
-﻿#if UNITY_LINUX
+﻿
 namespace Moqunity.Abstract.UnityEngine
 {
 	public partial interface Input
 	{
+#if UNITY_LINUX
 		/// <summary>
 		///   <para>Determine whether a particular joystick model has been preconfigured by Unity. (Linux-only).</para>
 		/// </summary>
@@ -11,6 +12,7 @@ namespace Moqunity.Abstract.UnityEngine
 		///   <para>True if the joystick layout has been preconfigured; false otherwise.</para>
 		/// </returns>
 		bool IsJoystickPreconfigured(string joystickName);
+		
+#endif
 	}
 }
-#endif

@@ -398,12 +398,6 @@ namespace Moqunity.Abstract.UnityEngine
 		public  int constantBufferOffsetAlignment { get; }
 
 		/// <summary>
-		///   <para>Obsolete - use SystemInfo.constantBufferOffsetAlignment instead. Minimum buffer offset (in bytes) when binding a constant buffer using Shader.SetConstantBuffer or Material.SetConstantBuffer.</para>
-		/// </summary>
-		[Obsolete("Use SystemInfo.constantBufferOffsetAlignment instead.")]
-		public  bool minConstantBufferOffsetAlignment { get; }
-
-		/// <summary>
 		///   <para>Returns true if the GPU supports partial mipmap chains (Read Only).</para>
 		/// </summary>
 		public  bool hasMipMaxLevel { get; }
@@ -427,30 +421,6 @@ namespace Moqunity.Abstract.UnityEngine
 		///   <para>This property is true if the graphics API of the target build platform takes RenderBufferStoreAction.StoreAndResolve into account, false if otherwise.</para>
 		/// </summary>
 		public  bool supportsStoreAndResolveAction { get; }
-
-		/// <summary>
-		///   <para>Are cubemap render textures supported? (Read Only)</para>
-		/// </summary>
-		[Obsolete("supportsRenderToCubemap always returns true, no need to call it")]
-		public  bool supportsRenderToCubemap { get; }
-
-		/// <summary>
-		///   <para>Are image effects supported? (Read Only)</para>
-		/// </summary>
-		[Obsolete("supportsImageEffects always returns true, no need to call it")]
-		public  bool supportsImageEffects { get; }
-
-		/// <summary>
-		///   <para>Is the stencil buffer supported? (Read Only)</para>
-		/// </summary>
-		[Obsolete("supportsStencil always returns true, no need to call it")]
-		public  int supportsStencil { get; }
-
-		[Obsolete("graphicsPixelFillrate is no longer supported in Unity 5.0+.")]
-		public  int graphicsPixelFillrate { get; }
-
-		[Obsolete("Vertex program support is required in Unity 5.0+")]
-		public  bool supportsVertexPrograms { get; }
 
 		/// <summary>
 		///   <para>Is render texture format supported?</para>

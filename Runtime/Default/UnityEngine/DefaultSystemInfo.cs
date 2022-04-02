@@ -158,8 +158,6 @@ namespace Moqunity.UnityEngine
 
 		public int constantBufferOffsetAlignment => global::UnityEngine.SystemInfo.constantBufferOffsetAlignment;
 
-		public bool minConstantBufferOffsetAlignment => global::UnityEngine.SystemInfo.minConstantBufferOffsetAlignment;
-
 		public bool hasMipMaxLevel => global::UnityEngine.SystemInfo.hasMipMaxLevel;
 
 		public bool supportsMipStreaming => global::UnityEngine.SystemInfo.supportsMipStreaming;
@@ -169,16 +167,6 @@ namespace Moqunity.UnityEngine
 		public global::UnityEngine.HDRDisplaySupportFlags hdrDisplaySupportFlags => global::UnityEngine.SystemInfo.hdrDisplaySupportFlags;
 
 		public bool supportsStoreAndResolveAction => global::UnityEngine.SystemInfo.supportsStoreAndResolveAction;
-
-		public bool supportsRenderToCubemap => global::UnityEngine.SystemInfo.supportsRenderToCubemap;
-
-		public bool supportsImageEffects => global::UnityEngine.SystemInfo.supportsImageEffects;
-
-		public int supportsStencil => global::UnityEngine.SystemInfo.supportsStencil;
-
-		public int graphicsPixelFillrate => global::UnityEngine.SystemInfo.graphicsPixelFillrate;
-
-		public bool supportsVertexPrograms => global::UnityEngine.SystemInfo.supportsVertexPrograms;
 
 		public global::UnityEngine.Experimental.Rendering.GraphicsFormat GetCompatibleFormat(global::UnityEngine.Experimental.Rendering.GraphicsFormat format, global::UnityEngine.Experimental.Rendering.FormatUsage usage) => global::UnityEngine.SystemInfo.GetCompatibleFormat(format, usage);
 
