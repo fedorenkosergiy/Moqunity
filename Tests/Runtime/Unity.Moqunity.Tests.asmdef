@@ -1,5 +1,6 @@
 {
     "name": "Unity.Moqunity.Tests",
+    "rootNamespace": "",
     "references": [
         "GUID:94b495f9055de034aba12db6a9c8c6f1"
     ],
@@ -8,8 +9,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll",
-        "Moq.dll"
+        "nunit.framework.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
