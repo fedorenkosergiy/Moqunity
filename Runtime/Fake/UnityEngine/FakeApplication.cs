@@ -75,6 +75,22 @@ namespace Moqunity.Fake.UnityEngine
 		public virtual event Application.LogCallback logMessageReceivedThreaded;
 		public virtual event Action<bool> focusChanged;
 
+		public virtual void InvokeOnBeforeRender() => onBeforeRender?.Invoke();
+
+		public virtual void InvokeQuitting() => quitting?.Invoke();
+
+		public virtual bool? InvokeWantsToQuit() => wantsToQuit?.Invoke();
+
+		public virtual void InvokeLowMemory() => lowMemory?.Invoke();
+
+		public virtual void InvokeLogMessageReceived(string condition, string stackTrace, LogType type) => logMessageReceived?.Invoke(condition, stackTrace, type);
+
+		public virtual void InvokeDeepLinkActivated(string value) => deepLinkActivated?.Invoke(value);
+
+		public virtual void InvokeLogMessageReceivedThreaded(string condition, string stackTrace, LogType type) => logMessageReceivedThreaded?.Invoke(condition, stackTrace, type);
+
+		public virtual void InvokeFocusChanged(bool value) => focusChanged?.Invoke(value);
+
 		public virtual bool CanStreamedLevelBeLoaded(int levelIndex)
 		{
 			throw new NotImplementedException();
