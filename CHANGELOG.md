@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Application base fake
 - FactoryInitializer component
 - TestingContext generic class
+- TestingFactory class
 
 ## [0.1.0] - 2021-10-10
 ### Added

@@ -11,6 +11,8 @@ namespace Moqunity.Abstract
 
 		Time Time { get; }
 
+		SystemInfo SystemInfo { get; }
+
 		void Init();
 	}
 }
