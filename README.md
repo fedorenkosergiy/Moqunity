@@ -157,3 +157,10 @@ public class SimpleTimerTests
     }
 }
 ```
+
+# Structure
+The package is consist of several logical parts
+
+* Abstract - interfaces that are copies of Unity API equivalents
+* Default - default implementations of interfaces. All of them simply redirect calls to Unity API
+* Fake - implementations of interfaces that are fully virtual and can be used as a base for your context
