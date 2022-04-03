@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SystemInfo interface, implementation, base fake
 - Application base fake
 - FactoryInitializer component
-- TestingContext generic class
+- TestingContext class
 - TestingFactory class
 
 ## [0.1.0] - 2021-10-10
