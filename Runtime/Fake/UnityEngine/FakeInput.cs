@@ -2,7 +2,7 @@ using System;
 
 namespace Moqunity.Fake.UnityEngine
 {
-	public class FakeInput : global::Moqunity.Abstract.UnityEngine.Input
+	public partial class FakeInput : global::Moqunity.Abstract.UnityEngine.Input
 	{
 		public virtual bool simulateMouseWithTouches { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 			   
