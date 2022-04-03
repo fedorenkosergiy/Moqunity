@@ -1,8 +1,7 @@
 {
     "name": "Unity.Moqunity",
-    "references": [
-        "GUID:ae40bac6c38fc2f4b8323c7e1ad91770"
-    ],
+    "rootNamespace": "",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
