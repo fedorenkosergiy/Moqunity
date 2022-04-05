@@ -11,9 +11,7 @@
     "Moqunity",
     "Wrapper",
     "UnityEngine",
-    "Context",
-    "Mock",
-    "Moq"
+    "Context"
   ],
   "author": {
     "name": "Serhii Fedorenko",
