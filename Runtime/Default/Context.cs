@@ -8,10 +8,10 @@ namespace Moqunity
 	{
 		private readonly Factory selfFactory;
 		private bool isDisposed;
-		private static Stack<Factory> factories = new Stack<Factory>();
+		private static readonly Stack<Factory> factories = new Stack<Factory>();
 		private static Factory peek;
 
-		public static Factory Factory => peek ?? (peek = factories.Peek());
+		public static Factory Factory => peek ??= factories.Peek();
 
 		static Context()
 		{

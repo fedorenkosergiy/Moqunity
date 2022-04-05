@@ -1,6 +1,4 @@
-﻿using Moqunity.Abstract;
-
-namespace Moqunity
+﻿namespace Moqunity
 {
 	public class DefaultContext : Context
 	{
