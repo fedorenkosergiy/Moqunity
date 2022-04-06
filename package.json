@@ -1,6 +1,6 @@
 {
   "name": "fedorenkosergiy.moqunity",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "displayName": "Moqunity",
   "description": "Wrapper of UnityEngine",
   "unity": "2020.3",
