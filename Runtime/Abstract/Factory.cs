@@ -14,6 +14,8 @@ namespace Moqunity.Abstract
 
 		SystemInfo SystemInfo { get; }
 
+		Random Random { get; }
+
 		void Init();
 	}
 }

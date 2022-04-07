@@ -11,6 +11,7 @@ namespace Moqunity
 		public Input Input { get; private set; }
 		public Time Time { get; private set; }
 		public SystemInfo SystemInfo { get; private set; }
+		public Random Random { get; private set; }
 
 		public void Init()
 		{
@@ -19,6 +20,7 @@ namespace Moqunity
 			Input = CreateInput();
 			Time = CreateTime();
 			SystemInfo = CreateSystemInfo();
+			Random = CreateRandom();
 		}
 
 		protected virtual Application CreateApplication() => new DefaultApplication();
@@ -30,5 +32,7 @@ namespace Moqunity
 		protected virtual Time CreateTime() => new DefaultTime();
 
 		protected virtual SystemInfo CreateSystemInfo() => new DefaultSystemInfo();
+
+		protected virtual Random CreateRandom() => new DefaultRandom();
 	}
 }

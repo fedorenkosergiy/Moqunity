@@ -12,6 +12,7 @@ namespace Moqunity
 		public Input Input { get; private set; }
 		public Time Time { get; private set; }
 		public SystemInfo SystemInfo { get; private set; }
+		public Random Random { get; private set; }
 
 		public void Init()
 		{
@@ -24,6 +25,7 @@ namespace Moqunity
 					Input = new DefaultInput();
 					Time = new DefaultTime();
 					SystemInfo = new DefaultSystemInfo();
+					Random = new DefaultRandom();
 					needsInitialization = false;
 				}
 				else
