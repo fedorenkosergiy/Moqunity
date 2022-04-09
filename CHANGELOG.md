@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - WSA.Application interface
 - WSA.Cursor interface
 - WSA.Launcher interface
-- Rendering.AsyncGPUReadback interface
+- Rendering.AsyncGPUReadback interface, base fake
 
 ## [0.2.1] - 2022-04-06
 ### Fixed
