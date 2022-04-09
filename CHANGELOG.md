@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Broken test assembly
 ### Added
-- Random interface, default implementation, fake implementation
-- WSA.Application interface
-- WSA.Cursor interface
-- WSA.Launcher interface
-- Rendering.AsyncGPUReadback interface, default implementation, fake implementation
+- Random
+- WSA.Application
+- WSA.Cursor
+- WSA.Launcher
+- Rendering.AsyncGPUReadback
 - Factory.Get<T>() method
 
 ## [0.2.1] - 2022-04-06
