@@ -3,7 +3,7 @@ using UnityEngine.Internal;
 
 namespace Moqunity.Abstract.UnityEngine
 {
-	public interface Screen
+	public interface Screen : StaticWrapper
 	{
 		/// <summary>
 		///   <para>The current width of the screen window in pixels (Read Only).</para>

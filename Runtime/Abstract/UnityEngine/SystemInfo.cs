@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 namespace Moqunity.Abstract.UnityEngine
 {
-	public partial interface SystemInfo
+	public partial interface SystemInfo : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Value returned by SystemInfo string properties which are not supported on the current platform.</para>

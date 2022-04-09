@@ -1,6 +1,6 @@
 ﻿namespace Moqunity.Abstract.UnityEngine
 {
-	public partial interface Random
+	public partial interface Random : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Gets or sets the full internal state of the random number generator.</para>

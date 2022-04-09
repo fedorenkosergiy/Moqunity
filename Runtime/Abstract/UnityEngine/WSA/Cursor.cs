@@ -3,7 +3,7 @@ namespace Moqunity.Abstract.UnityEngine.WSA
 	/// <summary>
 	///   <para>Cursor API for Windows Store Apps.</para>
 	/// </summary>
-	public interface Cursor
+	public interface Cursor : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Set a custom cursor.</para>

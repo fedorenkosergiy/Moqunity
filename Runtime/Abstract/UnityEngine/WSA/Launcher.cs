@@ -3,7 +3,7 @@
 	/// <summary>
 	///   <para>Class which is capable of launching user's default app for file type or a protocol. See also PlayerSettings where you can specify file or URI associations.</para>
 	/// </summary>
-	public interface Launcher
+	public interface Launcher : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Launches the default app associated with specified file.</para>

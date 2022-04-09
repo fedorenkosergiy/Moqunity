@@ -3,7 +3,7 @@ namespace Moqunity.Abstract.UnityEngine
 	/// <summary>
 	///   <para>Provides an interface to get time information from Unity.</para>
 	/// </summary>
-	public interface Time
+	public interface Time : StaticWrapper
 	{
 		/// <summary>
 		///   <para>The time at the beginning of this frame (Read Only).</para>

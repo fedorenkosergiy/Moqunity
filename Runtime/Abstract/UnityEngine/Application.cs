@@ -7,7 +7,7 @@ namespace Moqunity.Abstract.UnityEngine
 	/// <summary>
 	/// Access to application run-time data.
 	/// </summary>
-	public interface Application
+	public interface Application : StaticWrapper
 	{
 		/// <summary>
 		/// Returns application version number (Read Only).

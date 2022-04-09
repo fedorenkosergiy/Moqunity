@@ -2,7 +2,7 @@
 
 namespace Moqunity.Abstract.UnityEngine
 {
-	public partial interface Input
+	public partial interface Input : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Returns the value of the virtual axis identified by axisName.</para>

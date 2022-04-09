@@ -6,33 +6,14 @@ namespace Moqunity
 {
 	public class TestingFactory : Factory
 	{
-		public Application Application { get; private set; }
-		public Screen Screen { get; private set; }
-		public Input Input { get; private set; }
-		public Time Time { get; private set; }
-		public SystemInfo SystemInfo { get; private set; }
-		public Random Random { get; private set; }
-
-		public void Init()
-		{
-			Application = CreateApplication();
-			Screen = CreateScreen();
-			Input = CreateInput();
-			Time = CreateTime();
-			SystemInfo = CreateSystemInfo();
-			Random = CreateRandom();
-		}
-
-		protected virtual Application CreateApplication() => new DefaultApplication();
-
-		protected virtual Screen CreateScreen() => new DefaultScreen();
-
-		protected virtual Input CreateInput() => new DefaultInput();
-
-		protected virtual Time CreateTime() => new DefaultTime();
-
-		protected virtual SystemInfo CreateSystemInfo() => new DefaultSystemInfo();
-
-		protected virtual Random CreateRandom() => new DefaultRandom();
+		private Factory innerFactory = new DefaultFactory();
+		public virtual Application Application => innerFactory.Application;
+		public virtual Screen Screen => innerFactory.Screen;
+		public virtual Input Input => innerFactory.Input;
+		public virtual Time Time => innerFactory.Time;
+		public virtual SystemInfo SystemInfo => innerFactory.SystemInfo;
+		public virtual Random Random => innerFactory.Random;
+		public virtual void Init() => innerFactory.Init();
+		public virtual T Get<T>() where T : StaticWrapper => innerFactory.Get<T>();
 	}
 }

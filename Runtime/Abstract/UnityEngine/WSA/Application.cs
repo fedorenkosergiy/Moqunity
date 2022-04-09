@@ -5,7 +5,7 @@ namespace Moqunity.Abstract.UnityEngine.WSA
 	/// <summary>
 	/// Provides essential methods related to Window Store application.
 	/// </summary>
-	public interface Application
+	public interface Application : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Arguments passed to application.</para>

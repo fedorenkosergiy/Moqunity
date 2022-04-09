@@ -9,7 +9,7 @@ namespace Moqunity.Abstract.UnityEngine.Rendering
 	/// <summary>
 	/// <para>Allows the asynchronous read back of GPU resources.</para>
 	/// </summary>
-	public interface AsyncGPUReadback
+	public interface AsyncGPUReadback : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Waits until the completion of every request.</para>
