@@ -4,6 +4,8 @@ using Moqunity.UnityEngine;
 using Random = Moqunity.Abstract.UnityEngine.Random;
 using System;
 using System.Collections.Generic;
+using Moqunity.Abstract.UnityEngine.Rendering;
+using Moqunity.UnityEngine.Rendering;
 
 namespace Moqunity
 {
@@ -58,7 +60,7 @@ namespace Moqunity
 
 		private void InstantianteStaticWrappersForUnityEngineRendering()
 		{
-
+			staticWrappers.Add(typeof(AsyncGPUReadback), new DefaultAsyncGPUReadback());
 		}
 
 		public T Get<T>() where T : StaticWrapper => (T)staticWrappers[typeof(T)];

@@ -99,7 +99,7 @@ public class SimpleTimerTests
 
         public MyFactory(Time time) => overriddenTime = time;
 
-        protected override Time CreateTime() => overriddenTime;
+        public override Time Time => overriddenTime;
     }
 
     [UnitySetUp]
