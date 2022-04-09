@@ -6,14 +6,8 @@ using UnityEngine.Rendering;
 
 namespace Moqunity.Fake.UnityEngine.Rendering
 {
-	/// <summary>
-	/// <para>Allows the asynchronous read back of GPU resources.</para>
-	/// </summary>
 	public class FakeAsyncGPUReadback : global::Moqunity.Abstract.UnityEngine.Rendering.AsyncGPUReadback
 	{
-		/// <summary>
-		///   <para>Waits until the completion of every request.</para>
-		/// </summary>
 		public virtual void WaitAllRequests() => throw new NotImplementedException();
 
 		public virtual AsyncGPUReadbackRequest Request(ComputeBuffer src, Action<AsyncGPUReadbackRequest> callback = null) => throw new NotImplementedException();

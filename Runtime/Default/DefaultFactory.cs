@@ -4,8 +4,6 @@ using Moqunity.UnityEngine;
 using Random = Moqunity.Abstract.UnityEngine.Random;
 using System;
 using System.Collections.Generic;
-using Moqunity.Abstract.UnityEngine.Rendering;
-using Moqunity.UnityEngine.Rendering;
 
 namespace Moqunity
 {
@@ -26,8 +24,9 @@ namespace Moqunity
 			{
 				if (needsInitialization)
 				{
-					InstantianteStaticWrappersForUnityEngine();
-					InstantianteStaticWrappersForUnityEngineRendering();
+					InstantiateStaticWrappersForUnityEngine();
+					InstantiateStaticWrappersForUnityEngineRendering();
+					InstantiateStaticWrappersForUnityEngineWsa();
 					needsInitialization = false;
 				}
 				else
@@ -37,7 +36,7 @@ namespace Moqunity
 			}
 		}
 
-		private void InstantianteStaticWrappersForUnityEngine()
+		private void InstantiateStaticWrappersForUnityEngine()
 		{
 			Application = new DefaultApplication();
 			staticWrappers.Add(typeof(Application), Application);
@@ -58,9 +57,14 @@ namespace Moqunity
 			staticWrappers.Add(typeof(Random), Random);
 		}
 
-		private void InstantianteStaticWrappersForUnityEngineRendering()
+		private void InstantiateStaticWrappersForUnityEngineRendering()
 		{
-			staticWrappers.Add(typeof(AsyncGPUReadback), new DefaultAsyncGPUReadback());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.AsyncGPUReadback), new Moqunity.UnityEngine.Rendering.DefaultAsyncGPUReadback());
+		}
+
+		private void InstantiateStaticWrappersForUnityEngineWsa()
+		{
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Application), new Moqunity.UnityEngine.WSA.DefaultApplication());
 		}
 
 		public T Get<T>() where T : StaticWrapper => (T)staticWrappers[typeof(T)];
