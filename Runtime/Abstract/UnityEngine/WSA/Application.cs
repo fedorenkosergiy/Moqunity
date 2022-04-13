@@ -1,4 +1,5 @@
-﻿using UnityEngine.WSA;
+﻿#if UNITY_WSA
+using UnityEngine.WSA;
 
 namespace Moqunity.Abstract.UnityEngine.WSA
 {
@@ -47,3 +48,4 @@ namespace Moqunity.Abstract.UnityEngine.WSA
 
 	}
 }
+#endif

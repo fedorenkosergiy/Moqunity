@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Moqunity
 {
-	public class DefaultFactory : Factory
+	public partial class DefaultFactory : Factory
 	{
 		private bool needsInitialization = true;
 
@@ -63,12 +63,7 @@ namespace Moqunity
 			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.OnDemandRendering), new Moqunity.UnityEngine.Rendering.DefaultOnDemandRendering());
 		}
 
-		private void InstantiateStaticWrappersForUnityEngineWsa()
-		{
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Application), new Moqunity.UnityEngine.WSA.DefaultApplication());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Cursor), new Moqunity.UnityEngine.WSA.DefaultCursor());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Launcher), new Moqunity.UnityEngine.WSA.DefaultLauncher());
-		}
+		partial void InstantiateStaticWrappersForUnityEngineWsa();
 
 		public T Get<T>() where T : StaticWrapper => (T)staticWrappers[typeof(T)];
 	}

@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using System;
 using UnityEngine.WSA;
 
@@ -20,3 +21,4 @@ namespace Moqunity.Fake.UnityEngine.WSA
         public void InvokeWindowActivated(WindowActivationState state) => windowActivated(state);
 	}
 }
+#endif

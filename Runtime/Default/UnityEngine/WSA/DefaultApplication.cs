@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using System;
 using UnityEngine.WSA;
 
@@ -25,3 +26,4 @@ namespace Moqunity.UnityEngine.WSA
 		public bool RunningOnUIThread() => global::UnityEngine.WSA.Application.RunningOnUIThread();
 	}
 }
+#endif

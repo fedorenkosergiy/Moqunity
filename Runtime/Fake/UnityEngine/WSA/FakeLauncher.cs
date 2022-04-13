@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using System;
 using UnityEngine.WSA;
 
@@ -10,3 +11,4 @@ namespace Moqunity.Fake.UnityEngine.WSA
 		public virtual void LaunchUri(string uri, bool showWarning) => throw new NotImplementedException();
 	}
 }
+#endif

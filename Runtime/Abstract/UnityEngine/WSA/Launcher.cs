@@ -1,4 +1,5 @@
-﻿namespace Moqunity.Abstract.UnityEngine.WSA
+﻿#if UNITY_WSA
+namespace Moqunity.Abstract.UnityEngine.WSA
 {
 	/// <summary>
 	///   <para>Class which is capable of launching user's default app for file type or a protocol. See also PlayerSettings where you can specify file or URI associations.</para>
@@ -27,3 +28,4 @@
 		void LaunchUri(string uri, bool showWarning);
 	}
 }
+#endif

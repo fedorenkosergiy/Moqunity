@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using System;
 
 namespace Moqunity.UnityEngine.WSA
@@ -7,3 +8,4 @@ namespace Moqunity.UnityEngine.WSA
         public virtual void SetCustomCursor(uint id) => global::UnityEngine.WSA.Cursor.SetCustomCursor(id);
     }
 }
+#endif

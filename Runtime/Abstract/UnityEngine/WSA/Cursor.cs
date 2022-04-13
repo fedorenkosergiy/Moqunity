@@ -1,3 +1,4 @@
+#if UNITY_WSA
 namespace Moqunity.Abstract.UnityEngine.WSA
 {
 	/// <summary>
@@ -12,3 +13,4 @@ namespace Moqunity.Abstract.UnityEngine.WSA
 		void SetCustomCursor(uint id);
 	}
 }
+#endif

@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using UnityEngine.WSA;
 
 namespace Moqunity.UnityEngine.WSA
@@ -9,3 +10,4 @@ namespace Moqunity.UnityEngine.WSA
 		public virtual void LaunchUri(string uri, bool showWarning) => global::UnityEngine.WSA.Launcher.LaunchUri(uri, showWarning);
 	}
 }
+#endif

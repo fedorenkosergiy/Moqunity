@@ -1,3 +1,4 @@
+#if UNITY_WSA
 using System;
 
 namespace Moqunity.Fake.UnityEngine.WSA
@@ -7,3 +8,4 @@ namespace Moqunity.Fake.UnityEngine.WSA
         public virtual void SetCustomCursor(uint id) => throw new NotImplementedException();
     }
 }
+#endif
