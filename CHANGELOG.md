@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - WSA.Cursor
 - WSA.Launcher
 - Rendering.AsyncGPUReadback
+- Rendering.OnDemandRendering
 - Factory.Get<T>() method
 
 ## [0.2.1] - 2022-04-06

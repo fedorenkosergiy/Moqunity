@@ -60,6 +60,7 @@ namespace Moqunity
 		private void InstantiateStaticWrappersForUnityEngineRendering()
 		{
 			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.AsyncGPUReadback), new Moqunity.UnityEngine.Rendering.DefaultAsyncGPUReadback());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.OnDemandRendering), new Moqunity.UnityEngine.Rendering.DefaultOnDemandRendering());
 		}
 
 		private void InstantiateStaticWrappersForUnityEngineWsa()
