@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Broken test assembly
 ### Added
 - Random
+- Debug
 - WSA.Application
 - WSA.Cursor
 - WSA.Launcher

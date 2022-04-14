@@ -18,6 +18,7 @@ namespace Moqunity
 		public Time Time { get; private set; }
 		public SystemInfo SystemInfo { get; private set; }
 		public Random Random { get; private set; }
+		public Debug Debug { get; private set; }
 		public void Init()
 		{
 			lock (this)
@@ -46,15 +47,18 @@ namespace Moqunity
 
 			Input = new DefaultInput();
 			staticWrappers.Add(typeof(Input), Input);
-	
+
 			Time = new DefaultTime();
 			staticWrappers.Add(typeof(Time), Time);
-	
+
 			SystemInfo = new DefaultSystemInfo();
 			staticWrappers.Add(typeof(SystemInfo), SystemInfo);
-	
+
 			Random = new DefaultRandom();
 			staticWrappers.Add(typeof(Random), Random);
+
+			Debug = new DefaultDebug();
+			staticWrappers.Add(typeof(Debug), Debug);
 		}
 
 		private void InstantiateStaticWrappersForUnityEngineRendering()

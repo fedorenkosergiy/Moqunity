@@ -7,7 +7,7 @@ namespace Moqunity.Abstract.UnityEngine
 	/// <summary>
 	///   <para>Class containing methods to ease debugging while developing a game.</para>
 	/// </summary>
-	public partial interface Debug
+	public partial interface Debug : StaticWrapper
 	{
 		/// <summary>
 		///   <para>Get default debug logger.</para>

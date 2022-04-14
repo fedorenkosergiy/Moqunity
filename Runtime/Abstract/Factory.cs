@@ -16,6 +16,8 @@ namespace Moqunity.Abstract
 
 		Random Random { get; }
 
+		Debug Debug { get; }
+
 		void Init();
 
 		public T Get<T>() where T : StaticWrapper;
