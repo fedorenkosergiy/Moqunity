@@ -1,6 +1,5 @@
 namespace Moqunity.Abstract.UnityEngine
 {
-
 	/// <summary>
 	///   <para>`PlayerPrefs` is a class that stores Player preferences between game sessions. It can store string, float and integer values into the user’s platform registry.</para>
 	/// </summary>

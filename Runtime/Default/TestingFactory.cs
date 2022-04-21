@@ -14,6 +14,7 @@ namespace Moqunity
 		public virtual SystemInfo SystemInfo => innerFactory.SystemInfo;
 		public virtual Random Random => innerFactory.Random;
 		public virtual Debug Debug => innerFactory.Debug;
+		public virtual PlayerPrefs PlayerPrefs => innerFactory.PlayerPrefs;
 		public virtual void Init() => innerFactory.Init();
 		public virtual T Get<T>() where T : StaticWrapper => innerFactory.Get<T>();
 	}

@@ -5,18 +5,13 @@ namespace Moqunity.Abstract
 	public interface Factory
 	{
 		Application Application { get; }
-
 		Screen Screen { get; }
-
 		Input Input { get; }
-
 		Time Time { get; }
-
 		SystemInfo SystemInfo { get; }
-
 		Random Random { get; }
-
 		Debug Debug { get; }
+		PlayerPrefs PlayerPrefs { get; }
 
 		void Init();
 
