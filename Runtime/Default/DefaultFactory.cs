@@ -20,6 +20,7 @@ namespace Moqunity
 		public Random Random { get; private set; }
 		public Debug Debug { get; private set; }
 		public PlayerPrefs PlayerPrefs { get; private set; }
+		public Resources Resources { get; private set; }
 		public void Init()
 		{
 			lock (this)
@@ -63,6 +64,9 @@ namespace Moqunity
 
 			PlayerPrefs = new DefaultPlayerPrefs();
 			staticWrappers.Add(typeof(PlayerPrefs), PlayerPrefs);
+
+			Resources = new DefaultResources();
+			staticWrappers.Add(typeof(Resources), Resources);
 		}
 
 		private void InstantiateStaticWrappersForUnityEngineRendering()

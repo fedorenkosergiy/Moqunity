@@ -12,6 +12,7 @@ namespace Moqunity.Abstract
 		Random Random { get; }
 		Debug Debug { get; }
 		PlayerPrefs PlayerPrefs { get; }
+		Resources Resources { get; }
 
 		void Init();
 

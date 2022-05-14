@@ -3,23 +3,8 @@ namespace Moqunity.Abstract.UnityEngine
 	/// <summary>
 	///   <para>The Resources class allows you to find and access Objects including assets.</para>
 	/// </summary>
-	public interface Resources
+	public partial interface Resources : StaticWrapper
 	{
-		/// <summary>
-		///   <para>Returns a resource at an asset path (Editor Only).</para>
-		/// </summary>
-		/// <param name="assetPath">Pathname of the target asset.</param>
-		/// <param name="type">Type filter for objects returned.</param>
-		[global::System.Obsolete(
-			"Use AssetDatabase.LoadAssetAtPath instead (UnityUpgradable) -> * [UnityEditor] UnityEditor.AssetDatabase.LoadAssetAtPath(*)",
-			true)]
-		global::UnityEngine.Object LoadAssetAtPath(string assetPath, global::System.Type type);
-
-		[global::System.Obsolete(
-			"Use AssetDatabase.LoadAssetAtPath<T>() instead (UnityUpgradable) -> * [UnityEditor] UnityEditor.AssetDatabase.LoadAssetAtPath<T>(*)",
-			true)]
-		T LoadAssetAtPath<T>(string assetPath) where T : global::UnityEngine.Object;
-
 		/// <summary>
 		///   <para>Returns a list of all objects of Type type.</para>
 		/// </summary>
@@ -92,8 +77,6 @@ namespace Moqunity.Abstract.UnityEngine
 		/// <param name="assetToUnload"></param>
 		void UnloadAsset(global::UnityEngine.Object assetToUnload);
 
-		void UnloadAssetImplResourceManager(global::UnityEngine.Object assetToUnload);
-
 		/// <summary>
 		///   <para>Unloads assets that are not used.</para>
 		/// </summary>
@@ -112,11 +95,6 @@ namespace Moqunity.Abstract.UnityEngine
 		global::UnityEngine.Object InstanceIDToObject(int instanceID);
 
 		void InstanceIDToObjectList(
-			global::System.IntPtr instanceIDs,
-			int instanceCount,
-			global::System.Collections.Generic.List<global::UnityEngine.Object> objects);
-
-		unsafe void InstanceIDToObjectList(
 			global::Unity.Collections.NativeArray<int> instanceIDs,
 			global::System.Collections.Generic.List<global::UnityEngine.Object> objects);
 	}
