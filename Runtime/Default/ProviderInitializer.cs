@@ -9,7 +9,7 @@ namespace Moqunity
 		{
 			if (_needInit)
 			{
-				Mxt.Provider.Init();
+				MoqunityApi.Provider.Init();
 				_needInit = false;
 			}
 
