@@ -1,7 +1,7 @@
 namespace Moqunity
 {
 	[global::UnityEngine.DefaultExecutionOrder(-10000)]
-	public class FactoryInitializer : global::UnityEngine.MonoBehaviour
+	public class ProviderInitializer : global::UnityEngine.MonoBehaviour
 	{
 		private static bool _needInit = true;
 
@@ -9,7 +9,7 @@ namespace Moqunity
 		{
 			if (_needInit)
 			{
-				Context.Factory.Init();
+				Mxt.Provider.Init();
 				_needInit = false;
 			}
 

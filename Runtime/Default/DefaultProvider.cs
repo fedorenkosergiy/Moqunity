@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Moqunity
 {
-	public partial class DefaultFactory : Factory
+	public partial class DefaultProvider : Provider
 	{
 		private bool needsInitialization = true;
 
@@ -34,7 +34,7 @@ namespace Moqunity
 				}
 				else
 				{
-					global::UnityEngine.Debug.LogWarning("factory already initialized");
+					global::UnityEngine.Debug.LogWarning("Provider already initialized");
 				}
 			}
 		}

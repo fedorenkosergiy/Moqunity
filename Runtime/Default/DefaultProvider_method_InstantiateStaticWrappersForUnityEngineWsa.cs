@@ -3,7 +3,7 @@ using Moqunity.Abstract;
 
 namespace Moqunity
 {
-	public partial class DefaultFactory : Factory
+	public partial class DefaultProvider : Provider
 	{
 		partial void InstantiateStaticWrappersForUnityEngineWsa()
 		{

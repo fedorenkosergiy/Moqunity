@@ -2,7 +2,7 @@
 
 namespace Moqunity.Abstract
 {
-	public interface Factory
+	public interface Provider
 	{
 		Application Application { get; }
 		Screen Screen { get; }
