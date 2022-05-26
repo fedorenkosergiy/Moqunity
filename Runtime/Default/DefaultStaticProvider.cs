@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Moqunity
 {
-	public partial class DefaultProvider : Provider
+	public partial class DefaultStaticProvider : StaticProvider
 	{
 		private bool needsInitialization = true;
 
@@ -34,7 +34,7 @@ namespace Moqunity
 				}
 				else
 				{
-					global::UnityEngine.Debug.LogWarning("Provider already initialized");
+					global::UnityEngine.Debug.LogWarning("Static already initialized");
 				}
 			}
 		}

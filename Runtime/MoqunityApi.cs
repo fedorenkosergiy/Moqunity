@@ -5,40 +5,64 @@ using Moqunity;
 
 public class MoqunityApi : IDisposable
 {
-	private readonly Provider _selfProvider;
-	private bool isDisposed;
-	private static readonly Stack<Provider> providers = new Stack<Provider>();
-	private static Provider peek;
+	private readonly StaticProvider _selfStaticProvider;
+	private readonly Factory _selfFactory;
+	private bool _isDisposed;
+	private static readonly Stack<StaticProvider> _providers = new Stack<StaticProvider>();
+	private static readonly Stack<Factory> _factories = new Stack<Factory>();
+	private static StaticProvider _provider;
+	private static Factory _factory;
 
-	public static Provider Provider => peek ??= providers.Peek();
+	public static StaticProvider Static => _provider ??= _providers.Peek();
+
+	public static Factory Factory => _factory ??= _factories.Peek();
 
 	static MoqunityApi()
 	{
 		_ = new DefaultMoqunityApi();
 	}
 
-	protected MoqunityApi(Provider provider)
+	protected MoqunityApi(StaticProvider staticProvider, Factory factory)
 	{
-		_selfProvider = provider;
-		isDisposed = false;
-		providers.Push(provider);
-		peek = null;
+		_selfStaticProvider = staticProvider;
+		_selfFactory = factory;
+		_isDisposed = false;
+		_providers.Push(staticProvider);
+		_factories.Push(factory);
+		_provider = null;
+		_factory = null;
 	}
 
 	public void Dispose()
 	{
-		if (isDisposed)
+		if (_isDisposed)
 		{
 			throw new ObjectDisposedException(GetType().Name);
 		}
 
-		peek = null;
-		Provider provider = providers.Pop();
-		if (provider != _selfProvider)
+		PopProvider();
+		PopFactory();
+
+		_isDisposed = true;
+	}
+
+	private void PopProvider()
+	{
+		_provider = null;
+		StaticProvider staticProvider = _providers.Pop();
+		if (staticProvider != _selfStaticProvider)
 		{
 			throw new InvalidOperationException("Wrong context");
 		}
+	}
 
-		isDisposed = true;
+	private void PopFactory()
+	{
+		_factory = null;
+		Factory factory = _factories.Pop();
+		if (factory != _selfFactory)
+		{
+			throw new InvalidOperationException("Wrong context");
+		}
 	}
 }

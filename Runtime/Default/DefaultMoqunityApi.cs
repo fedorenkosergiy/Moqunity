@@ -2,6 +2,6 @@
 {
 	public class DefaultMoqunityApi : MoqunityApi
 	{
-		public DefaultMoqunityApi() : base(new DefaultProvider()) { }
+		public DefaultMoqunityApi() : base(new DefaultStaticProvider(), new DefaultFactory()) { }
 	}
 }

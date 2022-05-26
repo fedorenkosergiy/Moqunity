@@ -2,13 +2,20 @@
 
 namespace Moqunity
 {
-	public class TestingMoqunityApi<T> : MoqunityApi where T : Provider, new()
+	public class TestingMoqunityApi<TStaticProvider, TFactory> : MoqunityApi
+		where TStaticProvider : class, StaticProvider, new()
+		where TFactory : class, Factory, new()
 	{
-		public TestingMoqunityApi() : base(new T()) { }
+		public TestingMoqunityApi() : base(new TStaticProvider(), new TFactory())
+		{
+		}
 	}
 
 	public class TestingMoqunityApi : MoqunityApi
 	{
-		public TestingMoqunityApi(Provider provider) : base(provider) { }
+		public TestingMoqunityApi(StaticProvider staticProvider, Factory factory)
+			: base(staticProvider, factory)
+		{
+		}
 	}
 }

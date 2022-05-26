@@ -2,7 +2,7 @@
 
 namespace Moqunity.Abstract
 {
-	public interface Provider
+	public interface StaticProvider
 	{
 		Application Application { get; }
 		Screen Screen { get; }
