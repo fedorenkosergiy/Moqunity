@@ -14,7 +14,7 @@ namespace Moqunity.Abstract
 		PlayerPrefs PlayerPrefs { get; }
 		Resources Resources { get; }
 
-		void Init();
+		void Init(Factory factory);
 
 		public T Get<T>() where T : StaticWrapper;
 	}

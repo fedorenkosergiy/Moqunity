@@ -5,12 +5,12 @@ namespace Moqunity
 {
 	public partial class DefaultStaticProvider : Static
 	{
-		partial void InstantiateStaticWrappersForUnityEngineWsa()
+		partial void InstantiateStaticWrappersForUnityEngineWsa(Factory factory)
 		{
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Application), new Moqunity.UnityEngine.WSA.DefaultApplication());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Cursor), new Moqunity.UnityEngine.WSA.DefaultCursor());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Launcher), new Moqunity.UnityEngine.WSA.DefaultLauncher());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Windows.File), new Moqunity.UnityEngine.Windows.DefaultFile());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Application), factory.WSA.NewApplication());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Cursor), factory.WSA.NewCursor());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.WSA.Launcher), factory.WSA.NewLauncher());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Windows.File), factory.Windows.NewFile());
 		}
 	}
 }

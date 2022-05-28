@@ -16,7 +16,7 @@ namespace Moqunity
 		public virtual Debug Debug => _innerStaticProvider.Debug;
 		public virtual PlayerPrefs PlayerPrefs => _innerStaticProvider.PlayerPrefs;
 		public virtual Resources Resources => _innerStaticProvider.Resources;
-		public virtual void Init() => _innerStaticProvider.Init();
+		public virtual void Init(Factory factory) => _innerStaticProvider.Init(factory);
 		public virtual T Get<T>() where T : StaticWrapper => _innerStaticProvider.Get<T>();
 	}
 }

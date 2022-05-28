@@ -21,15 +21,15 @@ namespace Moqunity
 		public Debug Debug { get; private set; }
 		public PlayerPrefs PlayerPrefs { get; private set; }
 		public Resources Resources { get; private set; }
-		public void Init()
+		public void Init(Factory factory)
 		{
 			lock (this)
 			{
 				if (needsInitialization)
 				{
-					InstantiateStaticWrappersForUnityEngine();
-					InstantiateStaticWrappersForUnityEngineRendering();
-					InstantiateStaticWrappersForUnityEngineWsa();
+					InstantiateStaticWrappersForUnityEngine(factory);
+					InstantiateStaticWrappersForUnityEngineRendering(factory);
+					InstantiateStaticWrappersForUnityEngineWsa(factory);
 					needsInitialization = false;
 				}
 				else
@@ -39,43 +39,43 @@ namespace Moqunity
 			}
 		}
 
-		private void InstantiateStaticWrappersForUnityEngine()
+		private void InstantiateStaticWrappersForUnityEngine(Factory factory)
 		{
-			Application = new DefaultApplication();
+			Application = factory.NewApplication();
 			staticWrappers.Add(typeof(Application), Application);
 
-			Screen = new DefaultScreen();
+			Screen = factory.NewScreen();
 			staticWrappers.Add(typeof(Screen), Screen);
 
-			Input = new DefaultInput();
+			Input = factory.NewInput();
 			staticWrappers.Add(typeof(Input), Input);
 
-			Time = new DefaultTime();
+			Time = factory.NewTime();
 			staticWrappers.Add(typeof(Time), Time);
 
-			SystemInfo = new DefaultSystemInfo();
+			SystemInfo = factory.NewSystemInfo();
 			staticWrappers.Add(typeof(SystemInfo), SystemInfo);
 
-			Random = new DefaultRandom();
+			Random = factory.NewRandom();
 			staticWrappers.Add(typeof(Random), Random);
 
-			Debug = new DefaultDebug();
+			Debug = factory.NewDebug();
 			staticWrappers.Add(typeof(Debug), Debug);
 
-			PlayerPrefs = new DefaultPlayerPrefs();
+			PlayerPrefs = factory.NewPlayerPrefs();
 			staticWrappers.Add(typeof(PlayerPrefs), PlayerPrefs);
 
-			Resources = new DefaultResources();
+			Resources = factory.NewResources();
 			staticWrappers.Add(typeof(Resources), Resources);
 		}
 
-		private void InstantiateStaticWrappersForUnityEngineRendering()
+		private void InstantiateStaticWrappersForUnityEngineRendering(Factory factory)
 		{
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.AsyncGPUReadback), new Moqunity.UnityEngine.Rendering.DefaultAsyncGPUReadback());
-			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.OnDemandRendering), new Moqunity.UnityEngine.Rendering.DefaultOnDemandRendering());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.AsyncGPUReadback), factory.Rendering.NewAsyncGPUReadback());
+			staticWrappers.Add(typeof(Moqunity.Abstract.UnityEngine.Rendering.OnDemandRendering), factory.Rendering.NewOnDemandRendering());
 		}
 
-		partial void InstantiateStaticWrappersForUnityEngineWsa();
+		partial void InstantiateStaticWrappersForUnityEngineWsa(Factory factory);
 
 		public T Get<T>() where T : StaticWrapper => (T)staticWrappers[typeof(T)];
 	}
