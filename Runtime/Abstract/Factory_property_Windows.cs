@@ -1,5 +1,5 @@
 #if UNITY_WSA
-using Moqunity.Abstract.UnityEngine.WSA;
+using Moqunity.Abstract.UnityEngine.Windows;
 
 namespace Moqunity.Abstract
 {
@@ -9,6 +9,8 @@ namespace Moqunity.Abstract
         {
             File NewFile();
         }
+
+        WindowsFactory Windows { get; }
     }
 }
 #endif

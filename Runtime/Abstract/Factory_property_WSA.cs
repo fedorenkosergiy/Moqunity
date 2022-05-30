@@ -11,6 +11,9 @@ namespace Moqunity.Abstract
             Cursor NewCursor();
             Launcher NewLauncher();
         }
+
+
+        WSAFactory WSA { get; }
     }
 }
 #endif
