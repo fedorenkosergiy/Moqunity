@@ -1,4 +1,5 @@
 using Moqunity.Abstract.UnityEngine;
+using Moqunity.Abstract.System.IO;
 
 namespace Moqunity.Abstract
 {
@@ -10,6 +11,18 @@ namespace Moqunity.Abstract
 			UnityEngine.Rendering.OnDemandRendering NewOnDemandRendering();
 		}
 		RenderingFactory Rendering { get; }
+
+		public interface SystemFactoty
+		{
+			public interface IOFactory
+			{
+				File NewFile();
+			}
+
+			IOFactory IO { get; }
+		}
+
+		SystemFactoty System { get; }
 
 		/// <summary>
 		/// Perform a ping to the supplied target IP address.

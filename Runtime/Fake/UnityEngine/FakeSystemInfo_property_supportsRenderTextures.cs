@@ -5,6 +5,6 @@ namespace Moqunity.Fake.UnityEngine
 #if UNITY_5_6_OR_NEWER
 		[global::System.Obsolete("supportsRenderTextures always returns true, no need to call it")]
 #endif
-		public virtual bool supportsRenderTextures => throw new System.NotImplementedException();
+		public virtual bool supportsRenderTextures => throw new global::System.NotImplementedException();
 	}
 }

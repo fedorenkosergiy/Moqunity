@@ -8,6 +8,6 @@
 #if UNITY_2019_1_OR_NEWER
 		[global::System.Obsolete("supportsRenderToCubemap always returns true, no need to call it")]
 #endif
-		public virtual bool supportsRenderToCubemap => throw new System.NotImplementedException();
+		public virtual bool supportsRenderToCubemap => throw new global::System.NotImplementedException();
 	}
 }

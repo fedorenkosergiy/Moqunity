@@ -49,14 +49,14 @@ namespace Moqunity.Abstract.UnityEngine
 		/// <param name="path">Pathname of the target folder. When using the empty string (i.e., ""), the function will load the entire contents of the Resources folder.</param>
 		/// <param name="systemTypeInstance">Type filter for objects returned.</param>
 		/// <param name="type"></param>
-		global::UnityEngine.ResourceRequest LoadAsync(string path, System.Type type);
+		global::UnityEngine.ResourceRequest LoadAsync(string path, global::System.Type type);
 
 		/// <summary>
 		///   <para>Loads all assets in a folder or file at path in a Resources folder.</para>
 		/// </summary>
 		/// <param name="path">Pathname of the target folder. When using the empty string (i.e., ""), the function will load the entire contents of the Resources folder.</param>
 		/// <param name="systemTypeInstance">Type filter for objects returned.</param>
-		global::UnityEngine.Object[] LoadAll(string path, System.Type systemTypeInstance);
+		global::UnityEngine.Object[] LoadAll(string path, global::System.Type systemTypeInstance);
 
 		/// <summary>
 		///   <para>Loads all assets in a folder or file at path in a Resources folder.</para>
@@ -67,7 +67,7 @@ namespace Moqunity.Abstract.UnityEngine
 
 		T[] LoadAll<T>(string path) where T : global::UnityEngine.Object;
 
-		global::UnityEngine.Object GetBuiltinResource(System.Type type, string path);
+		global::UnityEngine.Object GetBuiltinResource(global::System.Type type, string path);
 
 		T GetBuiltinResource<T>(string path) where T : global::UnityEngine.Object;
 

@@ -7,8 +7,8 @@
 #endif
 		public virtual int seed
 		{
-			get => throw new System.NotImplementedException();
-			set => throw new System.NotImplementedException();
+			get => throw new global::System.NotImplementedException();
+			set => throw new global::System.NotImplementedException();
 		}
 	}
 }

@@ -4,6 +4,7 @@ using Moqunity.UnityEngine;
 using Random = Moqunity.Abstract.UnityEngine.Random;
 using System;
 using System.Collections.Generic;
+using Moqunity.Abstract.System.IO;
 
 namespace Moqunity
 {
@@ -27,6 +28,7 @@ namespace Moqunity
 			{
 				if (needsInitialization)
 				{
+					InstantiateStaticWrappersForSystem(factory);
 					InstantiateStaticWrappersForUnityEngine(factory);
 					InstantiateStaticWrappersForUnityEngineRendering(factory);
 					InstantiateStaticWrappersForUnityEngineWsa(factory);
@@ -37,6 +39,11 @@ namespace Moqunity
 					global::UnityEngine.Debug.LogWarning("Static already initialized");
 				}
 			}
+		}
+
+		private void InstantiateStaticWrappersForSystem(Factory factory)
+		{
+			staticWrappers.Add(typeof(File), factory.System.IO.NewFile());
 		}
 
 		private void InstantiateStaticWrappersForUnityEngine(Factory factory)

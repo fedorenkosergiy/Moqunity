@@ -9,7 +9,7 @@
 		[global::System.Obsolete("Use SystemInfo.constantBufferOffsetAlignment instead.")]
 #endif
 #if UNITY_2019_1_OR_NEWER
-		public virtual bool minConstantBufferOffsetAlignment => throw new System.NotImplementedException();
+		public virtual bool minConstantBufferOffsetAlignment => throw new global::System.NotImplementedException();
 #endif
 	}
 }
