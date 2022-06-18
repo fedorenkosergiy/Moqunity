@@ -1,8 +1,4 @@
 ﻿#if UNITY_2021_2_OR_NEWER
-#define NET_STANDARD_2_1
-#endif
-
-#if NET_STANDARD_2_1
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -12,7 +8,6 @@ namespace Moqunity.Abstract.System.IO
 {
 	public partial interface File
 	{
-
 		Task AppendAllLinesAsync(
 			string path,
 			IEnumerable<string> contents,

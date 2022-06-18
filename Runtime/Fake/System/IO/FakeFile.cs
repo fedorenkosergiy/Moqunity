@@ -1,13 +1,13 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Moqunity.Fake.System.IO
 {
-	public class FakeFile : Moqunity.Abstract.System.IO.File
+	[PublicAPI]
+	public partial class FakeFile : Moqunity.Abstract.System.IO.File
 	{
 		public virtual void AppendAllLines(string path, IEnumerable<string> contents)
 		{
@@ -267,97 +267,6 @@ namespace Moqunity.Fake.System.IO
 
 		public virtual void WriteAllText(string path, string contents, Encoding encoding)
 		{
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task AppendAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task AppendAllLinesAsync(string path, IEnumerable<string> contents,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task AppendAllTextAsync(string path, string contents, Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task AppendAllTextAsync(string path, string contents, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task<byte[]> ReadAllBytesAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task<string[]> ReadAllLinesAsync(string path, Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task<string[]> ReadAllLinesAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task<string> ReadAllTextAsync(string path, Encoding encoding, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task<string> ReadAllTextAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task WriteAllBytesAsync(string path, byte[] bytes, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task WriteAllLinesAsync(string path, IEnumerable<string> contents,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task WriteAllTextAsync(string path, string contents, Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
-			throw new NotImplementedException();
-		}
-
-		public virtual async Task WriteAllTextAsync(string path, string contents, CancellationToken cancellationToken = default(CancellationToken))
-		{
-			await Task.Yield();
 			throw new NotImplementedException();
 		}
 	}
