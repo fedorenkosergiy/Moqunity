@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Moqunity.UnityEngine
@@ -13,7 +12,11 @@ namespace Moqunity.UnityEngine
 #endif
 		public Object LoadAssetAtPath(string assetPath, Type type)
 		{
-			return Resources.LoadAssetAtPath(assetPath, type);
+#if UNITY_5_2 || UNITY_5_3_OR_NEWER
+			throw new global::System.NotImplementedException();
+#else
+			return global::UnityEngine.Resources.LoadAssetAtPath(assetPath, type);
+#endif
 		}
 
 #if UNITY_5_2 || UNITY_5_3_OR_NEWER
@@ -23,7 +26,11 @@ namespace Moqunity.UnityEngine
 #endif
 		public T LoadAssetAtPath<T>(string assetPath) where T : Object
 		{
-			return Resources.LoadAssetAtPath<T>(assetPath);
+#if UNITY_5_2 || UNITY_5_3_OR_NEWER
+			throw new global::System.NotImplementedException();
+#else
+			return global::UnityEngine.Resources.LoadAssetAtPath<T>(assetPath);
+#endif
 		}
 	}
 }
