@@ -2,12 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Moqunity.Abstract.System.IO
 {
-	public interface File : StaticWrapper
+	public partial interface File : StaticWrapper
 	{
 		void AppendAllLines(string path, IEnumerable<string> contents);
 
@@ -123,76 +121,5 @@ namespace Moqunity.Abstract.System.IO
 		void WriteAllText(string path, string contents);
 
 		void WriteAllText(string path, string contents, Encoding encoding);
-
-		Task AppendAllLinesAsync(
-			string path,
-			IEnumerable<string> contents,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task AppendAllLinesAsync(
-			string path,
-			IEnumerable<string> contents,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task AppendAllTextAsync(
-			string path,
-			string contents,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task AppendAllTextAsync(
-			string path,
-			string contents,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task<byte[]> ReadAllBytesAsync(
-			string path,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task<string[]> ReadAllLinesAsync(
-			string path,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task<string[]> ReadAllLinesAsync(
-			string path,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task<string> ReadAllTextAsync(
-			string path,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task<string> ReadAllTextAsync(
-			string path,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task WriteAllBytesAsync(
-			string path,
-			byte[] bytes,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task WriteAllLinesAsync(
-			string path,
-			IEnumerable<string> contents,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task WriteAllLinesAsync(
-			string path,
-			IEnumerable<string> contents,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task WriteAllTextAsync(
-			string path,
-			string contents,
-			Encoding encoding,
-			CancellationToken cancellationToken = default(CancellationToken));
-
-		Task WriteAllTextAsync(
-			string path,
-			string contents,
-			CancellationToken cancellationToken = default(CancellationToken));
 	}
 }
