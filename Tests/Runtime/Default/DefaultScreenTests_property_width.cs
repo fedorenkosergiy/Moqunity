@@ -15,7 +15,7 @@ namespace Moqunity.UnityEngine
 		public void CheckWidthSetter()
 		{
 #if !NET_STANDARD_2_0
-			dynamic screen = System.Activator.CreateInstance("Unity.Moqunity", "Moqunity.UnityEngine.DefaultScreen");
+			dynamic screen = global::System.Activator.CreateInstance("Unity.Moqunity", "Moqunity.UnityEngine.DefaultScreen");
 			Assert.Throws<Microsoft.CSharp.RuntimeBinder.RuntimeBinderException>(() =>
 			{
 				screen.width = 100;
